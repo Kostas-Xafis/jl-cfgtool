@@ -1,0 +1,13 @@
+diff --git a/silk/float/encode_frame_FLP.c b/silk/float/encode_frame_FLP.c
+index 8a327c5..60eac75 100644
+--- a/silk/float/encode_frame_FLP.c
++++ b/silk/float/encode_frame_FLP.c
+@@ -60,7 +60,7 @@ void silk_encode_do_VAD_FLP(
+     /**************************************************/
+     /* Convert speech activity into VAD and DTX flags */
+     /**************************************************/
+-    if( psEnc->sCmn.speech_activity_Q8 < activity_threshold ) {
++    if( 0 && psEnc->sCmn.speech_activity_Q8 < activity_threshold ) { /* patched: never mark a frame inactive */
+         psEnc->sCmn.indices.signalType = TYPE_NO_VOICE_ACTIVITY;
+         psEnc->sCmn.noSpeechCounter++;
+         if( psEnc->sCmn.noSpeechCounter <= NB_SPEECH_FRAMES_BEFORE_DTX ) {

@@ -1,0 +1,8 @@
+# Never commit dumps or extracted audio: they are the device maker's copyright.
+*.bin
+*.wts
+*.sbc
+*.wav
+tones/
+opus/
+__pycache__/
